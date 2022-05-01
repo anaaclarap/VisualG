@@ -1,6 +1,4 @@
 Algoritmo "salarioliquido"
-//  
-//  
 
 Var
  salario_bruto, salario_liquido : real
@@ -13,7 +11,7 @@ Inicio
  Escreval("Calculadora de Salário Líquido")
  Escreval("=================================")
  
- Escreval("Informe o seu Salário Líquido:")
+ Escreval("Informe o seu Salário Bruto:")
  Leia(salario_bruto)
  Escreval("---------------------------------")
  
@@ -29,7 +27,7 @@ Inicio
           inss <- (salario_bruto - 1212) * 0.09  + faixa1
           Senao
              Se(salario_bruto >= 2427.36) e (salario_bruto <= 3641.03)Entao
-                inss <- salario-bruto - 2427.36) * 0.12 + faixa1 + faixa2
+                inss <- (-salario-bruto - 2427.36) * 0.12 + faixa1 + faixa2
                 Senao
                    Se(salario_bruto >= 3641.04) e (salario_bruto <= 7087.22)Entao
                       inss <- (salario_bruto - 3641.04) * 0.14 + faixa1 + faixa2 + faixa3
@@ -46,7 +44,7 @@ Inicio
     irrf <- 0
     Senao
        Se(desconto_inss >= 1903.99) e (desconto_inss <= 2826.65)Entao
-          irrf <- (desconto_inss * 0.075) - 142.80
+          irrf <- (desconto_inss * 0.075) - 142.80 //diferença do min e max
           Senao
              Se(desconto_inss >= 2826.66) e (desconto_inss <= 3751.05)Entao
                 irrf <- (desconto_inss * 0.15) - 	354.80
