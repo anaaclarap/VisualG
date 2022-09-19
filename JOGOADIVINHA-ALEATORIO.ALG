@@ -1,13 +1,11 @@
-Algoritmo "JogoAdivinha"
+Algoritmo "JogoAdivinha-aleatorio"
 
 Var
-   numero, tentativa, resposta : inteiro
-
-
+   numero,  tentativa, resposta : inteiro
 
 Inicio
-   numero <- 5
-   
+   numero <- randi(100)
+
    Escreval("----------------------------------")
    Escreval("Bem vindo ao jogo!")
    Escreval("----------------------------------")
@@ -29,9 +27,9 @@ Inicio
             Escreval("----------------------------------")
          Senao
          FimSe
-         
       FimSe
-      Se(resposta = 5)Entao
+
+      Se(resposta = numero)Entao
          Escreval("Parabens! Você acertou!")
          Escreval("----------------------------------")
          interrompa
@@ -40,13 +38,10 @@ Inicio
             Escreval("Tente mais uma vez")
             Escreval("----------------------------------")
          Senao
-            Escreval("Você perdeu!")
+            Escreval("Você perdeu! O número era: ", numero)
             Escreval("----------------------------------")
 
          Fimse
       FimSe
    FimPara
-
-
-
 Fimalgoritmo
